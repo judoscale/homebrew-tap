@@ -5,13 +5,13 @@
 class Judo < Formula
   desc "Official command line client for Judoscale"
   homepage "https://judoscale.com"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.3/judo_0.0.3_darwin_amd64.tar.gz"
-      sha256 "137b09adeaab01bcf0bbaaa326ba42ea298dc7312d0bfe9e7e75a8d0f9bb8b45"
+      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.4/judo_0.0.4_darwin_amd64.tar.gz"
+      sha256 "3f3e24f41ce342d58d4f5a107ccfd9e9441ebb69f40fae6409b44606d0a25b7a"
 
       define_method(:install) do
         bin.install "judo"
@@ -19,8 +19,8 @@ class Judo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.3/judo_0.0.3_darwin_arm64.tar.gz"
-      sha256 "a8abe35c8f4f1ff83494e43da940b575d79f78ea9d7c9ee9cb75adbc3a9a20c0"
+      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.4/judo_0.0.4_darwin_arm64.tar.gz"
+      sha256 "7a67b381ec848028b06b5d72ff21d75fea12d8350a46e6beb99c8a367cb9c7e6"
 
       define_method(:install) do
         bin.install "judo"
@@ -31,16 +31,16 @@ class Judo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.3/judo_0.0.3_linux_amd64.tar.gz"
-      sha256 "4f89bc916ac4ef006b839e34c7d2353af8ed11575c6cdaa4f3960cf3dda7aa34"
+      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.4/judo_0.0.4_linux_amd64.tar.gz"
+      sha256 "c40ae43dd00c6c9c8c0b15cdc3fd2654e8ae485ddcb25bfa570599c39e18ef80"
       define_method(:install) do
         bin.install "judo"
         bin.install_symlink "judo" => "judoscale"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.3/judo_0.0.3_linux_arm64.tar.gz"
-      sha256 "43ca0273a1bbb90e2cc88976fc888295b5468f920f9235ae402cd4aa14d3a585"
+      url "https://github.com/judoscale/judoscale-cli/releases/download/v0.0.4/judo_0.0.4_linux_arm64.tar.gz"
+      sha256 "a83f166089ac3cb3842ba493c2459276d5627580896b2cb14c675cdc4d98691f"
       define_method(:install) do
         bin.install "judo"
         bin.install_symlink "judo" => "judoscale"
